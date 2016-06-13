@@ -45,12 +45,6 @@
     <div id="text_areas">
         <!-- Begin Ace box -->
         <div id="code_area">
-             <style>
-             editor.setOptions({
-                 fontFamily: "tahoma",
-                 fontSize: "10pt"
-               });
-               </style>
             <div style="position: relative; clear: left; float: none;">
                 <div id="code_txt_real">print "Hello, world!"</div>
                 <textarea id="code_txt" rows="20" cols="60"></textarea>
@@ -116,7 +110,6 @@
     <div style="clear: both;"></div>
 
     <input type="button" id="compilerun_but" value="Go" onclick="go()" />
-    Target:
     <select hidden id="mode" onchange="modeswitch()">
         <option value="js">JavaScript</option>
         <option value="c">C</option>
