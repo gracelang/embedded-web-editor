@@ -145,18 +145,12 @@
 </body>
 <script>
 
-var query = window.location.search;
-var vars = query.split('&');
-var starter_file = vars[0];
+var starter_file = window.location.search;
 
-if (vars.length > 1 && vars[1] == "canvas"){
-    window.alert("Canvas");
-    //document.getElementById("tab_canvas").click();
-}
 if (starter_file != null && starter_file.length != 0){
   var req = new XMLHttpRequest();
   
-  req.open("GET", "./examples/" + starter_file.substring(1) + ".grace", true);
+  req.open("GET", "./examples/" + starter_file.substring(1) + ".grace", false);
   req.send(null);
   if (req.status == 200) {
       /*if (ace)
