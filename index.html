@@ -37,8 +37,14 @@
     <script src="http://web.cecs.pdx.edu/~grace/minigrace/js/rtobjectdraw.js" type="text/javascript"></script>
     <script src="http://web.cecs.pdx.edu/~grace/minigrace/js/animation.js" type="text/javascript"></script>
     <script src="http://web.cecs.pdx.edu/~grace/minigrace/js/minitest.js" type="text/javascript"></script>
-    <script src="http://web.cecs.pdx.edu/~grace/minigrace/js/ace/ace.js" type="text/javascript"></script>
+
+
+    <script src="https://raw.githubusercontent.com/ajaxorg/ace-builds/a4e495d8901876c6bafe3870a35cb8e32c827e97/src-min/ace.js" type="text/javascript"></script>
     <script src="http://web.cecs.pdx.edu/~grace/minigrace/js/ace/mode-grace.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <script src="http://web.cecs.pdx.edu/~pcowal/minigrace/js/graphics/turtle.js" type="text/javascript"></script>
+    <script src="http://web.cecs.pdx.edu/~pcowal/minigrace/js/graphics/logo.js" type="text/javascript"></script>
 </head>
 
 <body onload="startup();">
@@ -138,10 +144,19 @@
     <button hidden onclick="saveCurrentTab();">Save current tab</button>
 </body>
 <script>
-var starter_file = (window.location.search);
+
+var query = window.location.search;
+var vars = query.split('&');
+var starter_file = vars[0];
+
+if (vars.length > 1 && vars[1] == "canvas"){
+    window.alert("Canvas");
+    //document.getElementById("tab_canvas").click();
+}
 if (starter_file != null && starter_file.length != 0){
   var req = new XMLHttpRequest();
-  req.open("GET", "./examples/" + starter_file.substring(1) + ".grace", false);
+  
+  req.open("GET", "./examples/" + starter_file.substring(1) + ".grace", true);
   req.send(null);
   if (req.status == 200) {
       /*if (ace)
@@ -149,7 +164,9 @@ if (starter_file != null && starter_file.length != 0){
        document.getElementById("code_txt").value = req.responseText;
        document.getElementById('modname').value = k;*/
       document.getElementById("code_txt_real").innerHTML = req.responseText;
+      
   }
 }
+
 </script>
 </html>
