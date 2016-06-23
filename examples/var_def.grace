@@ -1,5 +1,6 @@
-var x := "I am a var. My value be changed." // vars assigned with :=
-def y = "I am a def. My value can't be changed." // defs assigned with =
+var x := "I am a variable. My value can be changed."
+
+def y = "I am a definition. My value can't be changed."
 
 print "{x}"
 print "{y}"

@@ -1,6 +1,6 @@
-var x := 1
+var x := 0
 
-while { (x < 40) } do {
+while { (x <= 30) } do {
     print "{x}"
     x := x + 3; // count by 3's
 }

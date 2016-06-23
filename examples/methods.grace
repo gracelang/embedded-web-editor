@@ -1,6 +1,6 @@
 var x := multiply(5,7)
 print "{x}"
-var y := dovide(48) by (6)
+var y := divide(48) by (6)
 print "{y}"
 
 method multiply(a, b) { // declared with multiple arguments

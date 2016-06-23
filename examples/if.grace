@@ -1,9 +1,7 @@
-var x := 23
+def spoonSize = 23
 
-if (x < 20) then {
-    print "x < 20 is TRUE"
-} elseif {x == 23} then {
-    print "x < 20 is FALSE and x == 23 is TRUE"
+if (spoonSize < 20) then {
+    print "My spoon is too small!"
 } else {
-    print "x < 20 is FALSE and x == 23 is FALSE"
+    print "My spoon is too big!"
 }
