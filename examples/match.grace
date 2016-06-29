@@ -1,4 +1,4 @@
-var x := 7
+def x = 7
 match (x)
   case { 0 -> print "zero" }   // literals
   case { "grace" -> print "grace"}

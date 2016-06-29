@@ -1,12 +1,20 @@
-var x := multiply(5,7)
+def x = multiply(5,7)
 print "{x}"
-var y := divide(48) by (6)
+def y = divide(48) by(6)
 print "{y}"
+print "{pi}"
 
-method multiply(a, b) { // declared with multiple arguments
+// declared with multiple parameters
+method multiply(a, b) {
   a * b
 }
 
-method divide(a) by (b) { // declared with multiple names
-  a * b
+// declared with multiple names
+method divide(a) by(b) {
+  a / b
+}
+
+// declared with no parameters
+method pi {
+  3.141593
 }
