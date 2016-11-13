@@ -1,13 +1,14 @@
 dialect "logo"
 
-forward(150)
+forward(100)
 turnRight(90)
 
-forward(150)
+forward(100)
 turnRight(90)
 
-forward(150)
+forward(100)
 turnRight(90)
 
-forward(150)
-turnRight(90) //Not essential to complete the square
+forward(100)
+turnRight(90) // This final turn is not essential to complete the square
+              // But it's polite to put your toys back where you found them!
