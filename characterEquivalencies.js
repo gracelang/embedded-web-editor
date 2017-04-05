@@ -1,5 +1,5 @@
 /*
-***  Provides Support for Charachter Equivilancies ***
+***  Provides Support for Character Equivalencies ***
      *This file contains the setupCharacterEquivalencies() function that is run in
       startup() when the editor first loads.
      *The function creates new command keys to support automatic conversion between
@@ -9,8 +9,8 @@
 
 function setupCharacterEquivalencies()
 {
-  var cursorMoved = false;  //Global varaible to be set when the cursor moves
-                         //after a charachter replacement occurs
+  var cursorMoved = false;  //Global variable to be set when the cursor moves
+                         //after a character replacement occurs
 
   //Possible replacements in the editor
   var replacements =
@@ -37,7 +37,7 @@ function setupCharacterEquivalencies()
  //Symbols to add as commands 
  var endSymbols = ['=','>','[',']'];
 
-  //****** Add All Character Equivalancies ********//
+  //****** Add All Character Equivalencies ********//
   for(i =0; i<4; ++i)
   {
        var a = endSymbols[i];
