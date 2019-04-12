@@ -1,4 +1,4 @@
-def a = emptyList
+def a = list.empty
 def b = a
 print "a = {a}, b = {b}"
 
